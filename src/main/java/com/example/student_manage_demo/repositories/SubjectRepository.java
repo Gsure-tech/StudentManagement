@@ -1,0 +1,10 @@
+package com.example.student_manage_demo.repositories;
+
+import com.example.student_manage_demo.models.Subject;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import java.util.List;
+
+public interface SubjectRepository extends JpaRepository<Subject, Long> {
+List <Subject> findSubjectByStudentId(Long studentId);
+}
